@@ -103,14 +103,26 @@ function checkInvalid(xGrids, yGrids, initialX, initialY, initialDirection, path
   if (!isInt(xGrids)) {
     return console.log('Error: xGrids is not integer value');
   }
+  if(xGrids <= 0) {
+    return console.log('Error: xGrids is not positive integer value');
+  }
   if (!isInt(yGrids)) {
     return console.log('Error: yGrids is not integer value');
+  }
+  if(yGrids <= 0) {
+    return console.log('Error: yGrids is not positive integer value');
   }
   if (!isInt(initialX)) {
     return console.log('Error: postion of X given is not integer value');
   }
+  if(initialX <= 0) {
+    return console.log('Error: postion of X is not positive integer value');
+  }
   if (!isInt(initialY)) {
     return console.log('Error: postion of Y given is not integer value');
+  }
+  if(initialY <= 0) {
+    return console.log('Error: postion of Y is not positive integer value');
   }
   return 1;
 }

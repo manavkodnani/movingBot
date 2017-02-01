@@ -100,29 +100,44 @@ function botMovement(xGrids, yGrids, initialX, initialY, initialDirection, pathO
 }
 function checkInvalid(xGrids, yGrids, initialX, initialY, initialDirection, pathOfBot) {
   function isInt(n) { return parseInt(n) === n }
+  if (xGrids === undefined) {
+    return console.log('Error: xGrids is not defined');
+  }
   if (!isInt(xGrids)) {
     return console.log('Error: xGrids is not integer value');
   }
-  if(xGrids <= 0) {
+  if (xGrids <= 0) {
     return console.log('Error: xGrids is not positive integer value');
+  }
+  if (yGrids === undefined) {
+    return console.log('Error: yGrids is not defined');
   }
   if (!isInt(yGrids)) {
     return console.log('Error: yGrids is not integer value');
   }
-  if(yGrids <= 0) {
+  if (yGrids <= 0) {
     return console.log('Error: yGrids is not positive integer value');
+  }
+  if (initialX === undefined) {
+    return console.log('Error: postion of X is not defined');
   }
   if (!isInt(initialX)) {
     return console.log('Error: postion of X given is not integer value');
   }
-  if(initialX <= 0) {
+  if (initialX <= 0) {
     return console.log('Error: postion of X is not positive integer value');
+  }
+  if (initialY === undefined) {
+    return console.log('Error: postion of Y is not defined');
   }
   if (!isInt(initialY)) {
     return console.log('Error: postion of Y given is not integer value');
   }
-  if(initialY <= 0) {
+  if (initialY <= 0) {
     return console.log('Error: postion of Y is not positive integer value');
+  }
+  if (initialDirection != 'N' && initialDirection != 'S' && initialDirection != 'E' && initialDirection != 'W') {
+    return console.log('Not a valid direction');
   }
   return 1;
 }

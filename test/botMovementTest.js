@@ -30,5 +30,13 @@ describe('When given valid input from inputFile.txt', function () {
       pathOfBot = ['MMLMLMLML'];
       assert.equal(botMovement(gridX, gridY, xposition, yposition, direction, pathOfBot), 'Error: xGrids is not integer value');
     })
-  })
+    it('should return error when any input is empty', function () {
+      gridX;
+      gridY = 20;
+      xposition = 3;
+      yposition = 3;
+      direction = 'N';
+      pathOfBot = ['MMLMLMLML'];
+    assert.equal(botMovement(gridX, gridY, xposition, yposition, direction, pathOfBot), 'Error: xGrids is not defined');
+  });
 });
